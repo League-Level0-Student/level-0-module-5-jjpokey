@@ -3,18 +3,21 @@ package algorithms;
 public class Fibonacci {
 
 	public static void main(String[] args) {
-		//NEED HELP
-		int p = 0;
-		int f = p;
+
+		int temp = 0;
+		int f = 0;
 		int fa = 1;
-		
-		System.out.println("0");
-		for(int a = 0; a < 13; a++) {
-			 p = f + fa;
-			System.out.println(p);
-			
+		System.out.print("0 " +  "1" + " ");
+		for(int a = 0; a < 11; a++) {
+			temp = f;
+			f = fa;
+			fa = temp;
+			f = f + fa;
+			System.out.print(fa + f + " ");
 			
 		}
 		
 	}
+
+	
 }
