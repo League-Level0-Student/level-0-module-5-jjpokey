@@ -19,9 +19,17 @@ System.out.println(name.toUpperCase());
 		// 3. Loop through each character of the name (steps 4 - 6).
 int a = (name.length());
 		//    HINT: Use .length() to determine the number of characters in the String.
-for(int b = 0; b > a; b++) {
-	
+for(int b = 0; b < a; b++) {
+	String next = (name.substring(b, b + 1));
+	if( b % 2 == 0) {
+		next = next.toUpperCase();
+	}
+	else {
+		next = next.toLowerCase();
+	}
+	goofyName += next;
 }
+JOptionPane.showMessageDialog(null, goofyName);
 			// 4. Create a String variable to store the next character of the name
 			//    using .substring(start, end)
 			//    HINT: replace 'start' and 'end' to get String with character at i 
